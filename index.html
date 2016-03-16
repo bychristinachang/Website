@@ -1,187 +1,53 @@
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
+		<title>Christina Chang</title>
 		<style>
-			.box {
-				width: 30vw;
-				height: 30vw;
-				background: darkred;
-				position: absolute;
-				top: 40%;
-				left: 40%;
-				transition: all 2s;
+			/*-- internal styles: page-specific */
+			body { background: white; }
+			
+			.headerbox {
+				height: 200px; width: 100vw;
+				margin: 0px;
 				}
 				
-			.dot {
-				width: 5px;
-				height: 5px;
-				border-radius: 50%;
-				background: gold;
-				float: left;
-				margin: 5px;
-				transition: all 2s;
-				}
+			h1 {
+			font-size: 200px;
+			font-family: georgia;
+			text-align: center;
+			color: black; 
+  			 font-weight: normal; 
+			}
 			
-			@media (min-width: 400px) {	
-		
-			.dot { width: 2 px; height: 2px; margin: 2px;}}
-			
-			@media (min-width: 600px) {	
-		
-			.dot { width: 5 px; height: 5px; margin: 5px;}}
-			
-			@media (min-width: 800px) {	
-			
-			.dot { width: 12 px; height: 12px; margin: 12px;}}
-			
-			@media (min-width: 1000px) {	
-			
-			.dot { width: 25 px; height: 25px; margin: 25px;}}
-				
+			div.scroll {
+  				background-color: white;
+   				width: 100vw;
+    			height: 100vw;
+    			overflow: scroll;
+    			}
 		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	</head>
+	 
+	<body  bgcolor="#FFFB00">
 	
-	<body bgcolor="gold">
-		<div class= "box">
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-				<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-				<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-					<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-				<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-				<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-					<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div><div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-				<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-				<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-					<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-				<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-					<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-			<div class = "dot"></div><div class = "dot"></div>
-		</div>
+		<img src="christina's.png" ALT = "Christina's" width=500px>
+		<img src="website.png" ALT = "Website" Width=500px>
+	<script>
+	function sticky_relocate() {
+		var window_top = $(window).scrollTop();
+		var div_top = $('#sticky-anchor').offset().top;
+		if (window_top > div_top) {
+			$('#sticky').addClass('stick');
+		} else {
+			$('#sticky').removeClass('stick');
+		}
+	}
+
+	$(function () {
+		$(window).scroll(sticky_relocate);
+		sticky_relocate();
+	});
+</script>
 	</body>
 </html>
