@@ -6,12 +6,66 @@
 			/*-- internal styles: page-specific */
 			body { background: white; }
 			
-			.headerbox {
-				height: 200px; width: 100vw;
+			
+			.box1 {
+				height: 400px; width: 100vw;
+				position: absolute;
+				top: 200px; 
 				margin: 0px;
 				}
+			
+			.box1a {
+				height: 140px;	
+				width: 140px;
+				position: absolute;
+				left: 200px;
+				}
 				
-			h1 {
+			.box1a:hover {
+				-webkit-box-shadow: 0 0 10px #ccc; 
+				box-shadow: 0 0 10px #ccc;
+				background: darkred;
+				opacity: 0.7;
+				
+				}
+				
+				
+				#slider-wrapper {
+display: block;
+max-width: 790px;
+margin: 5% auto;
+max-height: 500px;
+height: 100%; }
+
+#slider {
+display: block;
+position: relative;
+z-index: 99999;
+max-width: 710px;
+width: 100%;
+margin: 0 auto; }
+
+#button-previous { 
+position: relative;
+left: 0;
+margin-top: 40%;
+width: 40px;
+height: 60px; }
+
+#button-next {
+position: relative;
+margin-top: 40%;
+float: right; }
+
+.sp {
+position: absolute; }
+
+#slider .sp {
+max-width: 710px;
+width: 100%;
+max-height: 500px; }
+			
+			h1{
 			font-size: 200px;
 			font-family: georgia;
 			text-align: center;
@@ -31,7 +85,26 @@
 	 
 	<body  bgcolor="#FFFB00">
 	
-		<img src="christinachang.png" ALT = "Christina's Website" align= "middle" width=300px>
+		<img src="christinachang.png" ALT = "Christina's Website" align= "right" width=300px position="fixed">
+		<img src="works.png" ALT = "Works" align= "left" width=100px position="fixed">
+		<img src="about.png" ALT = "About" align= "left" width=130px position="fixed">
+		
+		<div class="box1"> <div class="box1a"> <img src="Red.png" ALT = "Red" align= "left" width=130px position="fixed"></div> </div>
+		
+		
+		
+		
+		<div id="slider-wrapper">
+
+<div id="slider">
+<img class="sp" src="/red1.jpg">
+<img class="sp" src="/red2.jpg">
+</div>
+
+<img id="button-previous" src="/button-arrow-left.jpg">
+<img id="button-next" src="/button-arrow-right.jpg">
+</div>
+		
 		
 	<script>
 	function sticky_relocate() {
