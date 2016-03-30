@@ -6,73 +6,79 @@
 			/*-- internal styles: page-specific */
 			body { background: white; }
 			
+			#slideshowred { 
+   				position: absolute;
+     			top: 100px;
+    			left: 100px;
+   				width: 320px; 
+    			height: 320px;
+   			 }
+    
+    		#slideshowred > div { 
+    			position: absolute; 
+   				top: 10px; 
+   				left: 10px; 
+    			right: 10px; 
+    			bottom: 10px; 
+			}
 			
-			.box1 {
-				height: 400px; width: 100vw;
-				position: absolute;
-				top: 200px; 
-				margin: 0px;
-				}
-			
-			.box1a {
-				height: 140px;	
-				width: 140px;
-				position: absolute;
-				left: 200px;
-				}
-				
-			.box1a:hover {
-				-webkit-box-shadow: 0 0 10px #ccc; 
-				box-shadow: 0 0 10px #ccc;
+			#slideshowred:hover {
+				z-index: 2;
 				background: darkred;
 				opacity: 0.7;
 				
 				}
 				
-				
-				#slider-wrapper {
-display: block;
-max-width: 790px;
-margin: 5% auto;
-max-height: 500px;
-height: 100%; }
-
-#slider {
-display: block;
-position: relative;
-z-index: 99999;
-max-width: 710px;
-width: 100%;
-margin: 0 auto; }
-
-#button-previous { 
-position: relative;
-left: 0;
-margin-top: 40%;
-width: 40px;
-height: 60px; }
-
-#button-next {
-position: relative;
-margin-top: 40%;
-float: right; }
-
-.sp {
-position: absolute; }
-
-#slider .sp {
-max-width: 710px;
-width: 100%;
-max-height: 500px; }
-			
-			h1{
-			font-size: 200px;
-			font-family: georgia;
-			text-align: center;
-			color: black; 
-  			 font-weight: normal; 
+	
+			#slideshowlove { 
+   				position: absolute;
+     			top: 430px;
+    			left: 200px;
+   				width: 300px; 
+    			height: 300px;
+   			 }
+    
+    		#slideshowlove > div { 
+    			position: absolute; 
+   				top: 10px; 
+   				left: 10px; 
+    			right: 10px; 
+    			bottom: 10px; 
 			}
 			
+			#slideshowlove:hover {
+				z-index: 2;
+				background: pink;
+				opacity: 0.7;
+				
+				}
+				
+				
+			#slideshowgrass { 
+   				position: absolute;
+     			top: 150px;
+    			left: 500px;
+   				width: 280px; 
+    			height: 280px;
+   			 }
+    
+    		#slideshowgrass > div { 
+    			position: absolute; 
+   				top: 10px; 
+   				left: 10px; 
+    			right: 10px; 
+    			bottom: 10px; 
+			}
+			
+			#slideshowgrass:hover {
+				z-index: 2;
+				background: darkgreen;
+				opacity: 0.7;
+				
+				}
+				
+		
+    
 			div.scroll {
   				background-color: white;
    				width: 100vw;
@@ -89,38 +95,74 @@ max-height: 500px; }
 		<img src="works.png" ALT = "Works" align= "left" width=100px position="fixed">
 		<img src="about.png" ALT = "About" align= "left" width=130px position="fixed">
 		
-		<div class="box1"> <div class="box1a"> <img src="Red.png" ALT = "Red" align= "left" width=130px position="fixed"></div> </div>
+	
 		
+		<div id="slideshowred">
+	<div><img src="red1.png" width="300" height="300" /></div>
+	<div><img src="red2.png" width="300" height="300" /></div>	
+	<div><img src="red3.png" width="300" height="300" /></div>	
+	<div><img src="red4.png" width="300" height="300" /></div>	
+	<div><img src="red5.png" width="300" height="300" /></div>	
+	<div><img src="red6.png" width="300" height="300" /></div>	
+	<div><img src="red7.png" width="300" height="300" /></div>	
+	<div><img src="red8.png" width="300" height="300" /></div>	
+	<div><img src="red9.png" width="300" height="300" /></div>
+	<div><img src="red10.png" width="300" height="300" /></div>		
+	</div>	
 		
-		
-		
-		<div id="slider-wrapper">
+	<div id="slideshowlove">
+	<div><img src="love1.png" width="280" height="280" /></div>
+	<div><img src="love2.png" width="280" height="280" /></div>	
+	<div><img src="love3.png" width="280" height="280" /></div>	
+	</div>		
+	
+	<div id="slideshowgrass">
+	<div><img src="grass1.png" width="260" height="260" /></div>
+	<div><img src="grass2.png" width="260" height="260" /></div>	
+	<div><img src="grass3.png" width="260" height="260" /></div>	
+	</div>		
 
-<div id="slider">
-<img class="sp" src="/red1.jpg">
-<img class="sp" src="/red2.jpg">
-</div>
-
-<img id="button-previous" src="/button-arrow-left.jpg">
-<img id="button-next" src="/button-arrow-right.jpg">
-</div>
 		
 		
 	<script>
-	function sticky_relocate() {
-		var window_top = $(window).scrollTop();
-		var div_top = $('#sticky-anchor').offset().top;
-		if (window_top > div_top) {
-			$('#sticky').addClass('stick');
-		} else {
-			$('#sticky').removeClass('stick');
-		}
-	}
+	
+$("#slideshowred > div:gt(0)").hide();
+	setInterval(function() { 
+ 	 $('#slideshowred > div:first')
+   		 .fadeOut(1000)
+   		 .next()
+   		 .fadeIn(1000)
+     	.end()
+    	.appendTo('#slideshowred');
+		},  3000);
+	
+	  
+	  
+$("#slideshowlove > div:gt(0)").hide();
+	setInterval(function() { 
+  		$('#slideshowlove > div:first')
+  		 .fadeOut(2000)
+   		 .next()
+    	 .fadeIn(2000)
+    	 .end()
+    	 .appendTo('#slideshowlove');
+		 },  3000);
+	  
 
-	$(function () {
-		$(window).scroll(sticky_relocate);
-		sticky_relocate();
-	});
+		  
+$("#slideshowgrass > div:gt(0)").hide();
+	setInterval(function() { 
+  		$('#slideshowgrass > div:first')
+  		 .fadeOut(2000)
+   		 .next()
+    	 .fadeIn(2000)
+    	 .end()
+    	 .appendTo('#slideshowgrass');
+		 },  2000);
+	  
+	
+
+
 </script>
 	</body>
 </html>
